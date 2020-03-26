@@ -114,7 +114,7 @@ namespace WpfCosmosVersion1
 
         public void BouncyCollisions(double tickTime, bool isGravityOn)
         {
-            double x = isGravityOn ? 2.5 : 1;
+            double x = isGravityOn ? 2.3 : 1;
             for (int i = 0; i < SpaceObjects.Count() - 1; i++)
             {
                 ISpaceObject spaceObject = SpaceObjects[i];
