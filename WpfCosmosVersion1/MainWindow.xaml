@@ -11,17 +11,27 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="140"/>
         </Grid.ColumnDefinitions>
+        
         <Canvas x:Name="canvasGame" Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="#FFE7E2F7" ClipToBounds="True"/>
-        <Button x:Name="buttonAddPlanet" Content="AddPlanet" Grid.Column="1" HorizontalAlignment="Right" Margin="0,40,20,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="buttonAddPlanet" Click="buttonAddPlanet_Click" Height="20"/>
-        <Button x:Name="buttonAddAsteroid" Content="AddAsteroid" Grid.Column="1" HorizontalAlignment="Right" Margin="0,80,20,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="buttonAddAsteroid" Click="buttonAddAsteroid_Click" Height="20"/>
-        <Button x:Name="buttonGravity" Content="Gravity on" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,240" VerticalAlignment="Bottom" Width="100" AutomationProperties.Name="buttonGravity" Click="buttonGravity_Click" Height="20"/>
-        <Button x:Name="buttonStart" Content="Start" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,200" VerticalAlignment="Bottom" Width="100" AutomationProperties.Name="buttonStart" Click="buttonStart_Click" Height="20"/>
-        <Button x:Name="buttonStop" Content="Stop" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,160" VerticalAlignment="Bottom" Width="100" AutomationProperties.Name="buttonStop" Click="buttonStop_Click" Height="20"/>
-        <Button x:Name="buttonRemovePlanets" Content="RemovePlanets" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,100" VerticalAlignment="Bottom" Width="100" AutomationProperties.Name="buttonRemovePlanets" Click="buttonRemovePlanets_Click" Height="20"/>
-        <Button x:Name="buttonUpdate" Content="Update" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,60" VerticalAlignment="Bottom" Width="100" AutomationProperties.Name="buttonUpdate" Click="buttonUpdate_Click" Height="20"/>
-        <Button x:Name="buttonClose" Content="Close" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Width="100" AutomationProperties.Name="buttonClose" Click="buttonClose_Click" Height="20"/>
-        <Label x:Name="labelFPS" Content="FPS:" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,83,130" VerticalAlignment="Bottom"/>
-        <Label x:Name="labelFPSDynamic" Content="0" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,50,130" VerticalAlignment="Bottom"/>
 
+        <Grid Grid.Column="1">
+            <StackPanel Orientation="Vertical" Margin="0 10">
+                <Button x:Name="buttonAddPlanet" Content="AddPlanet" Margin="0 5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" AutomationProperties.Name="buttonAddPlanet" Click="buttonAddPlanet_Click" Height="20"/>
+                <Button x:Name="buttonAddAsteroid" Content="AddAsteroid" Margin="0 5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" AutomationProperties.Name="buttonAddAsteroid" Click="buttonAddAsteroid_Click" Height="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0 10">
+                <Button x:Name="buttonGravity" Content="Gravity on" Grid.Column="1" HorizontalAlignment="Center" Width="100" AutomationProperties.Name="buttonGravity" Click="buttonGravity_Click" Height="20"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label x:Name="labelFPS" Content="FPS:" Grid.Column="1" HorizontalAlignment="Center" />
+                    <Label x:Name="labelFPSDynamic" Content="0" Grid.Column="1" HorizontalAlignment="Center" />
+                </StackPanel>
+                <Button x:Name="buttonStart" Content="Start" Margin="0 5" Grid.Column="1" HorizontalAlignment="Center" Width="100" AutomationProperties.Name="buttonStart" Click="buttonStart_Click" Height="20"/>
+                <Button x:Name="buttonStop" Content="Stop" Margin="0 5" Grid.Column="1" HorizontalAlignment="Center" Width="100" AutomationProperties.Name="buttonStop" Click="buttonStop_Click" Height="20"/>
+                <Button x:Name="buttonRemovePlanets" Content="RemovePlanets" Margin="0 5" Grid.Column="1" HorizontalAlignment="Center" Width="100" AutomationProperties.Name="buttonRemovePlanets" Click="buttonRemovePlanets_Click" Height="20"/>
+                <Button x:Name="buttonUpdate" Content="Update" Margin="0 5" Grid.Column="1" HorizontalAlignment="Center" Width="100" AutomationProperties.Name="buttonUpdate" Click="buttonUpdate_Click" Height="20"/>
+                <Button x:Name="buttonClose" Content="Close" Margin="0 5" Grid.Column="1" HorizontalAlignment="Center" Width="100" AutomationProperties.Name="buttonClose" Click="buttonClose_Click" Height="20"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
